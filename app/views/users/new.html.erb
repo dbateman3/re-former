@@ -30,9 +30,16 @@
 <% end %>
 <% end %>
 
+<h1>Create your profile</h1>
 <%= form_for @user do |f| %>
-	Email: <%= f.text_field :email, value: 'example@example.com' %><br>
-	Username: <%= f.text_field :username, value: 'myusername' %><br>
-	Password: <%= f.password_field :password %><br>
+	<%= f.label :email %>
+	<%= f.text_field :email, value: 'example@example.com' %><br>
+
+	<%= f.label :username %>
+	<%= f.text_field :username, value: 'myusername' %><br>
+
+	<%= f.label :password %>
+	<%= f.password_field :password %><br>
+
 	<%= f.submit "Submit" %>
 <% end %>
